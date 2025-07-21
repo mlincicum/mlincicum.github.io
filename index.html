@@ -1,19 +1,102 @@
 <!DOCTYPE html>
 
-
 <html>
   <head>
     <title>Megan Lincicum's Portfolio</title>
     <link rel="stylesheet" href="./resources/style.css" >
-    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Space+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dee52e6025.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
   </head>
 
   <body>
-    <div class="title">
-        <h1>
-            hi. i'm megan.
-        </h1>
+    <div class="stars initial"></div>
+    <div class="stars continual"></div>
+
+    <div class="prop worrel">
+      <div class="prop-float">
+        <div class="prop-rotate-alt">
+          <img src="resources/images/worrel.png" alt="floating astronaut squirrel">
+        </div>
+      </div>
     </div>
+
+    <div class="prop spaceship">
+      <div class="prop-float">
+        <div class="prop-rotate-alt">
+          <img src="resources/images/starship.png" alt="floating rocket ship">
+        </div>
+      </div>
+    </div>
+
+    <div class="prop blue-star">
+      <div class="prop-float">
+        <div class="prop-rotate-alt">
+          <img src="resources/images/blue-star.png" alt="cartoony blue star">
+        </div>
+      </div>
+    </div>
+
+    <div class="prop pink-star">
+      <div class="prop-float">
+        <div class="prop-rotate">
+          <img src="resources/images/pink-star.png" alt="cartoony pink star">
+        </div>
+      </div>
+    </div>
+
+    <div class="prop yellow-star">
+      <div class="prop-float">
+        <div class="prop-rotate">
+          <img src="resources/images/yellow-star.png" alt="cartoony yellow star">
+        </div>
+      </div>
+    </div>
+
+    <div class="prop planet">
+      <div class="prop-float">
+        <div class="prop-rotate">
+          <img src="resources/images/planet.png" alt="floating planet">
+        </div>
+      </div>
+    </div>
+
+    <div class="sections">
+      <div class="home-content" id="home">
+        <h1>Hi, I'm <span class="gradient-name">Megan Lincicum</span></h1>
+        <p>
+          I'm an engineering student & digital artist with a passion for game design and storytelling.
+        </p>
+        <div class="home-nav">
+          <button data-section="1">CS Projects</button>
+          <button data-section="2">Art Portfolio</button>
+          <button data-section="3">About & Contact</button>
+        </div>
+      </div>
+      <section class="section projects">
+        <button type="button" class="back-button"><i class="fa-solid fa-angle-up"></i></button>
+        <h1>Projects</h1>
+        <div class="content-scroll">
+          <!-- long content here -->
+        </div>
+      </section>
+      <section class="section art">
+        <button type="button" class="back-button"><i class="fa-solid fa-angle-up"></i></button>
+        <h1>Art</h1>
+        <div class="content-scroll">
+          <!-- long content here -->
+        </div>
+      </section>
+      <section class="section about/contact">
+        <button type="button" class="back-button"><i class="fa-solid fa-angle-up"></i></button>
+        <h1>About Me</h1>
+        <div class="content-scroll">
+          <!-- long content here -->
+           <i class="fa-brands fa-instagram"></i>
+        </div>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>

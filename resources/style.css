@@ -1,20 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Hubballi&family=Space+Mono&display=swap');
+
 :root {
-    --bg-color:#434662;
+  --outline-color: #c550dc;
 }
 
-* {
-    margin:0;
-    padding: 0;
+/* Basic page styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
 }
 
-body {
-    background-color: var(--bg-color);
+/* Stars background */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: transform 1s ease, filter 1s ease;
 }
 
-.title h1 {
-    font-family: 'Hubballi', sans-serif;
-    font-size: 10em;
-    color: white;
+/* Content layer */
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+}
 
-    text-align: center;
+.sections {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+  z-index: 3;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Each section fills viewport */
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section h1 {
+  color: rgb(255, 255, 255);
+  font-family: 'Comfortaa',  sans-serif;
+  font-size: 2.5em;
+  text-shadow: 0px 0px 2px var(--outline-color);
+}
+
+.content-scroll {
+  position: absolute;
+  top: 100px; /* space for header */
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  overflow-y: auto;
+  color: white;
+}
+
+/* Home section */
+.home-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 30vh;
+  font-family: 'Comfortaa', 'Hubballi', 'Space Mono', sans-serif;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2em;
+}
+
+.home-nav button {
+  background: pink;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8em 1.5em;
+  margin: 0 0.5em;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.home-nav button:hover {
+  transform: scale(1.1);
+}
+
+.gradient-name {
+  background: linear-gradient(
+    -45deg,
+    rgb(255, 0, 174), /* deep blue */
+    rgb(219, 153, 205), /* cyan */
+    #fff, /* white */
+    rgb(0, 119, 255),
+    skyblue /* blue again to loop */
+  );
+  background-size: 400% 400%; /* large so it can move */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.back-button {
+  position: relative;
+  z-index: 900;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  margin: 0 0.5em;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, visibility 4s ease 0.8s, max-height 2s ease, opacity 4s ease 0.8s;
+  
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+}
+
+.back-button i {
+  color: white;
+  animation: float-ui 10s ease-in-out infinite alternate;
+  margin-top: 5px;
+}
+
+.back-button.show {
+  opacity: 1;
+  visibility: visible;
+  max-height: 100px; /* Or something large enough */
+}
+
+
+/* Single star style */
+.star {
+  position: absolute;
+  background: rgb(237, 187, 216);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: floatDown linear infinite;
+}
+.star-init {
+  position: absolute;
+  background: rgb(237, 187, 216);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: floatDown linear 1;
+}
+
+/* Animation for stars */
+@keyframes floatDown {
+  from {
+    transform: translateY(-10vh);
+  }
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* Props floating in foreground */
+.prop {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  transition: transform 1s ease;
+  
+}
+
+.prop-rotate {
+  width: 100%;
+  animation: rotate 480s linear infinite;
+}
+
+.prop-rotate-alt {
+  width: 100%;
+  animation: rotate-alt 700s linear infinite;
+}
+
+.prop-float {
+  width: 100%;
+  animation: float 12s ease-in-out infinite alternate;
+}
+
+.prop img {
+  width: 100%;
+  display: block;
+}
+
+.worrel {
+  top: 60%;
+  left: 25%;
+  width: 240px;
+}
+
+.spaceship {
+  top: 140%;
+  left: 90%;
+  width: 240px; 
+  filter: blur(0.75px);
+}
+
+.pink-star {
+  top: 25%;
+  left: 90%;
+  width: 50px;
+  filter: blur(0.5px);
+}
+
+.blue-star {
+  top: 20%;
+  left: 5%;
+  width: 50px;
+  filter: blur(1px);
+}
+
+.yellow-star {
+  top: 95%;
+  left: 55%;
+  width: 50px;
+}
+
+.planet {
+  top: 120%;
+  left: 10%;
+  width: 160px;
+  filter: blur(2px);
+}
+
+@keyframes float-ui {
+  0% { transform: translateY(-5px); }
+  100% { transform: translateY(5px); }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(10px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-alt {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.1); }
+  50%  { transform: scale(0.9); }
+  70%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+/* When bounce class is added */
+.worrel-inner.bounce {
+  animation: bounce 0.2s ease;
 }
