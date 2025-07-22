@@ -62,7 +62,7 @@
     </div>
 
     <div class="sections">
-      <div class="home-content" id="home">
+      <div class="section home-content" id=0>
         <h1>Hi, I'm <span class="gradient-name">Megan Lincicum</span></h1>
         <p>
           I'm an engineering student & digital artist with a passion for game design and storytelling.
@@ -73,26 +73,44 @@
           <button data-section="3">About & Contact</button>
         </div>
       </div>
-      <section class="section projects">
+      <section id=1 class="section projects">
         <button type="button" class="back-button"><i class="fa-solid fa-angle-up"></i></button>
-        <h1>Projects</h1>
-        <div class="content-scroll">
+        <h1 class="header">Projects</h1>
+        <div class="content">
           <!-- long content here -->
         </div>
       </section>
-      <section class="section art">
+      <section id=2 class="section art">
         <button type="button" class="back-button"><i class="fa-solid fa-angle-up"></i></button>
-        <h1>Art</h1>
-        <div class="content-scroll">
+        <h1 class="header">Art</h1>
+        <div class="content">
           <!-- long content here -->
         </div>
       </section>
-      <section class="section about/contact">
+      <section id=3 class="section about/contact">
         <button type="button" class="back-button"><i class="fa-solid fa-angle-up"></i></button>
-        <h1>About Me</h1>
-        <div class="content-scroll">
-          <!-- long content here -->
-           <i class="fa-brands fa-instagram"></i>
+        <h1 class="header">About Me</h1>
+        <div class="about-wrapper">
+          <div class="portrait-container">
+            <img src="./resources/images/108783.jpeg" alt="Cartoony self-portrait of Megan" class="portrait">
+          </div>
+          <div class="about-content">
+            <p>
+              Hi! I’m <span class="gradient-name">Megan Lincicum</span> — an engineering student at Johns Hopkins University with a passion for CS and game development.
+            </p>
+            <p>
+              I love creating games, working on meaningful web projects, and helping others learn to code.
+            <p>
+              When I’m not coding, you’ll find me writing stories, drawing comics, or otherwise bringing worlds to life.
+            </p>
+
+            <p>I’m always open to new opportunities, collaborations, or just saying hi — so feel free to reach out!</p>
+          </div>
+          <div class="contact-icons">
+            <a href="mailto:mglincicum@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/megan-lincicum/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            <a href="https://bsky.app/profile/megs-trying-art.bsky.social" target="_blank"><i class="fa-brands fa-bluesky fa-2x"></i></a>
+          </div>
         </div>
       </section>
     </div>

@@ -62,7 +62,7 @@ let currentSection = 0;
 
 function panToSection(section) {
   // move the sections
-  sections.style.transform = `translateY(-${section * 100}vh)`;
+  document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
   //stars.style.transform = `translateY(${section * 20}vh)`;
   // characters.forEach(char => {
   //   char.style.transform = `translateY(${section * 40}vh)`;

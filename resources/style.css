@@ -11,6 +11,8 @@ body, html {
   height: 100%;
   overflow: hidden;
   background: rgb(0, 0, 0);
+  font-family: 'Comfortaa', 'Hubballi', 'Space-Mono', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Stars background */
@@ -23,48 +25,32 @@ body, html {
 }
 
 /* Content layer */
-.nav {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 3;
-}
 
 .sections {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 1s ease;
   z-index: 3;
 }
 
 .section {
   width: 100%;
-  height: 100%;
-  overflow: hidden; /* Each section fills viewport */
+  min-height: 100vh;
+  overflow: hidden; 
   position: relative;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+
+  font-family: 'Comfortaa', 'Hubballi', 'Space Mono', sans-serif;
 }
 
-.section h1 {
+.header{
   color: rgb(255, 255, 255);
   font-family: 'Comfortaa',  sans-serif;
   font-size: 2.5em;
   text-shadow: 0px 0px 2px var(--outline-color);
-}
-
-.content-scroll {
-  position: absolute;
-  top: 100px; /* space for header */
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  overflow-y: auto;
-  color: white;
+  text-align: center;
 }
 
 /* Home section */
@@ -75,7 +61,6 @@ body, html {
   max-width: 600px;
   margin: 0 auto;
   padding-top: 30vh;
-  font-family: 'Comfortaa', 'Hubballi', 'Space Mono', sans-serif;
 }
 
 .home-content h1 {
@@ -142,7 +127,7 @@ body, html {
   margin: 0 0.5em;
   font-size: 2rem;
   cursor: pointer;
-  transition: transform 0.2s ease, visibility 4s ease 0.8s, max-height 2s ease, opacity 4s ease 0.8s;
+  transition: transform 0.2s ease, visibility 3s ease 0.8s, max-height 2s ease, opacity 3s ease 0.8s;
   
   opacity: 0;
   visibility: hidden;
@@ -156,13 +141,13 @@ body, html {
 .back-button i {
   color: white;
   animation: float-ui 10s ease-in-out infinite alternate;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .back-button.show {
   opacity: 1;
   visibility: visible;
-  max-height: 100px; /* Or something large enough */
+  max-height: 100px; 
 }
 
 
@@ -262,8 +247,8 @@ body, html {
 }
 
 @keyframes float-ui {
-  0% { transform: translateY(-5px); }
-  100% { transform: translateY(5px); }
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(10px); }
 }
 
 @keyframes float {
@@ -305,4 +290,57 @@ body, html {
 /* When bounce class is added */
 .worrel-inner.bounce {
   animation: bounce 0.2s ease;
+}
+
+
+/* About me / contact section */
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+
+.portrait-container {
+  flex: 0 0 200px;
+  position: relative;
+  animation: float-portrait 6s ease-in-out alternate infinite;
+}
+
+@keyframes float-portrait {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.portrait {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(174, 231, 255, 0.5);
+}
+
+.about-content {
+  flex: 1 1 600px;
+  color: white;
+  max-width: 500px;
+}
+
+.contact-icons {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  color: white;
+  gap: 30px;
+}
+
+.contact-icons a {
+  text-decoration: none;
+}
+
+.contact-icons a:link, a:visited {
+  color: white;
 }
