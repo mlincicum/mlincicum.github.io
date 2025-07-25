@@ -10,53 +10,55 @@
   </head>
 
   <body>
-    <div class="stars initial"></div>
-    <div class="stars continual"></div>
+    <div class="background">
+      <div class="stars initial"></div>
+      <div class="stars continual"></div>
 
-    <div class="prop worrel">
-      <div class="prop-float">
-        <div class="prop-rotate-alt">
-          <img src="resources/images/worrel.png" alt="floating astronaut squirrel">
+      <div class="prop worrel">
+        <div class="prop-float">
+          <div class="prop-rotate-alt">
+            <img src="resources/images/worrel.png" alt="floating astronaut squirrel">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="prop spaceship">
-      <div class="prop-float">
-        <div class="prop-rotate-alt">
-          <img src="resources/images/starship.png" alt="floating rocket ship">
+      <div class="prop spaceship">
+        <div class="prop-float">
+          <div class="prop-rotate-alt">
+            <img src="resources/images/starship.png" alt="floating rocket ship">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="prop blue-star">
-      <div class="prop-float">
-        <div class="prop-rotate-alt">
-          <img src="resources/images/blue-star.png" alt="cartoony blue star">
+      <div class="prop blue-star">
+        <div class="prop-float">
+          <div class="prop-rotate-alt">
+            <img src="resources/images/blue-star.png" alt="cartoony blue star">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="prop pink-star">
-      <div class="prop-float">
-        <div class="prop-rotate">
-          <img src="resources/images/pink-star.png" alt="cartoony pink star">
+      <div class="prop pink-star">
+        <div class="prop-float">
+          <div class="prop-rotate">
+            <img src="resources/images/pink-star.png" alt="cartoony pink star">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="prop yellow-star">
-      <div class="prop-float">
-        <div class="prop-rotate">
-          <img src="resources/images/yellow-star.png" alt="cartoony yellow star">
+      <div class="prop yellow-star">
+        <div class="prop-float">
+          <div class="prop-rotate">
+            <img src="resources/images/yellow-star.png" alt="cartoony yellow star">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="prop planet">
-      <div class="prop-float">
-        <div class="prop-rotate">
-          <img src="resources/images/planet.png" alt="floating planet">
+      <div class="prop planet">
+        <div class="prop-float">
+          <div class="prop-rotate">
+            <img src="resources/images/planet.png" alt="floating planet">
+          </div>
         </div>
       </div>
     </div>
@@ -75,41 +77,212 @@
       </div>
       <section id=1 class="section projects">
         <button type="button" class="back-button"><i class="fa-solid fa-angle-up"></i></button>
-        <h1 class="header">Projects</h1>
-        <div class="content">
-          <!-- long content here -->
+        <div class="scrollable">
+          <h1 class="header">Projects</h1>
+        <div class="project-container">
+
+          <div class="tags">
+            <button class="filter-btn" data-filter="all" style="background-color: pink;">All</button>
+            <button class="filter-btn" data-filter="game-dev">Game Development</button>
+            <button class="filter-btn" data-filter="web-dev">Web Development</button>
+            <button class="filter-btn" data-filter="data-science">Data Science</button>
+            <button class="filter-btn" data-filter="in-dev">In Development</button>
+          </div>
+
+           <div class="project" data-tags="game-dev in-dev">
+              <img class= "project-image" src="resources/images/project-thumbs/kali-thumb.png" alt="Pixel art of a dystopian landscape">
+            <div class="project-description">
+              <h3>Kali</h3>
+              <div class="project-skills">
+                <p>Java</p>
+                <p>Custom Engine</p>
+                <p>Networking</p>
+              </div>
+              <p>
+                A 2D multiplayer game in development with a small online team using a custom Java engine. My work focuses on core engine systems, networking architecture, and building gameplay features in a fully original environment.
+              </p>
+            </div>
+           </div>
+
+           <div class="project" data-tags="game-dev">
+            <a href="https://laserdice.itch.io/one-punch-husband" target="_blank"><img class= "project-image" src="resources/images/project-thumbs/oph-thumb.png" alt="Blocky art of a superhero with a ladle and title text One Punch Husband"></a>
+            <div class="project-description">
+              <a href="https://laserdice.itch.io/one-punch-husband" target="_blank"><h3>One Punch Husband</h3></a>
+              <div class="project-skills">
+                <p>Design</p>
+                <p>Digital Art</p>
+                <p>GDevelop</p>
+              </div>
+              <p>
+                A comedy game made for a week-long game jam. I created all art and animations, character design, and contributed to coding the gameplay. The game was voted 2nd place overall.
+              </p>
+            </div>
+           </div>
+
+           <div class="project" data-tags="web-dev in-dev">
+            <img class= "project-image" src="resources/images/project-thumbs/foodline-thumb.png" alt="A logo of a box full of food">
+            <div class="project-description">
+              <h3>Baltimore Foodline</h3>
+              <div class="project-skills">
+                <p>Web Development</p>
+                <p>Firebase</p>
+                <p>Twilio</p>
+              </div>
+              <p>
+                A website and text platform in development helping connect Baltimore residents in need with food resources. I work on the front-end, backend (Firebase) and text automation (Twilio).
+              </p>
+            </div>
+           </div>
+
+           <div class="project" data-tags="data-science in-dev">
+            <img class= "project-image" src="resources/images/project-thumbs/rna-thumb.png" alt="A colorful UMAP plot">
+            <div class="project-description">
+              <h3>scRNA-seq Analysis</h3>
+              <div class="project-skills">
+                <p>Python</p>
+                <p>Bioinformatics</p>
+                <p>Data Science</p>
+              </div>
+              <p>
+                In my lab work, I conduct single-cell RNA sequencing data analysis using Python. My role combines bioinformatics pipelines, scripting, and data visualization in order to derive insights about retinal development.
+              </p>
+            </div>
+           </div>
+
+           <div class="project" data-tags="game-dev">
+            <a href="https://laserdice.itch.io/demon-island" target="_blank"><img class= "project-image" src="resources/images/project-thumbs/demon-thumb.png" alt="Art depicting Momotaro, a monkey, a dog, and a pheasant, aboard a ship."></a>
+            <div class="project-description">
+              <a href="https://laserdice.itch.io/demon-island" target="_blank"><h3>Demon Island</h3></a>
+              <div class="project-skills">
+                <p>Godot</p>
+                <p>GDScript</p>
+                <p>Sound Design</p>
+              </div>
+              <p>
+                A unique match-three roguelike game made for the Godot Wild Jam #70 based off the folk tale Momotaro. All code was done by myself within the 9 days, as well as integrating sound music.
+              </p>
+            </div>
+           </div>
+
+           <div class="project" data-tags="web-dev">
+              <img class= "project-image" src="resources/images/project-thumbs/fetch-thumb.png" alt="A logo of a paw with a heart in it.">
+            <div class="project-description">
+              <h3>Go Fetch!</h3>
+              <div class="project-skills">
+                <p>App Development</p>
+                <p>Firebase</p>
+                <p>React</p>
+              </div>
+              <p>
+                A prototype mobile app that helps connect adoptable pets with owners through a “swipe and match” experience. Partner shelters upload animal profiles, while users create preferences and chat with shelters when they find a match.
+              </p>
+            </div>
+           </div>
+
+           <div class="project" data-tags="data-science">
+              <img class= "project-image" src="resources/images/project-thumbs/assip-thumb.png" alt="A colorful graph describing with categories of Youtube videos such as educational, entertainment, etc.">
+            <div class="project-description">
+              <h3>ASSIP</h3>
+              <div class="project-skills">
+                <p>Python</p>
+                <p>R</p>
+                <p>Data Science</p>
+              </div>
+              <p>
+                A data science research internship with GMU's Community Informatics Lab focused on analyzing YouTube risk trends using Python and statistics. Published an abstract and presented a research poster.
+              </p>
+            </div>
+           </div>
+
+           <div class="project" data-tags="game-dev">
+              <img class= "project-image" src="resources/images/project-thumbs/unity-thumb.png" alt="A screenshot of a busy game screen where roads connect different buildings and materials travel between them.">
+            <div class="project-description">
+              <h3>Tradefolk</h3>
+              <div class="project-skills">
+                <p>Unity</p>
+                <p>C#</p>
+                <p>Shaders</p>
+              </div>
+              <p>
+                A prototype 2D resource management game made solo in Unity. Players place buildings, gather materials, run supply lines, and produce goods for sale.
+              </p>
+            </div>
+           </div>
+
+          </div>
         </div>
       </section>
       <section id=2 class="section art">
         <button type="button" class="back-button"><i class="fa-solid fa-angle-up"></i></button>
-        <h1 class="header">Art</h1>
-        <div class="content">
-          <!-- long content here -->
+        <div class="scrollable">
+          <h1 class="header">Art</h1>
+
+          <div class="tags">
+            <button class="art-filter-btn" data-filter="illustrations" style="background-color: pink;">Illustrations</button>
+            <button class="art-filter-btn" data-filter="game-assets">Game Assets</button>
+          </div>
+
+          <div class="art-grid" data-tags="illustrations">
+            <a href="resources/images/art/illustrations/boy.png"><img src="resources/images/art/illustrations/boy-cropped.png" alt=""></a>
+            <a href="resources/images/art/illustrations/PaperBoy.png"><img src="resources/images/art/illustrations/PaperBoy.png" alt=""></a>
+            <a href="resources/images/art/illustrations/jubilee.png"><img src="resources/images/art/illustrations/jubilee.png" alt=""></a>
+            <a href="resources/images/art/illustrations/worrel.jpg"><img src="resources/images/art/illustrations/worrel.jpg" alt=""></a>
+            <a href="resources/images/art/illustrations/kathy.png"><img src="resources/images/art/illustrations/kathy.png" alt=""></a>
+            
+            <a href="resources/images/art/illustrations/brant_design.png"><img src="resources/images/art/illustrations/brant_design.png" alt=""></a>
+          </div>
+
+          <div class="art-grid" data-tags="game-assets">
+            <a href="resources/images/art/games/sheba.png"><img src="resources/images/art/games/sheba.png" alt=""></a>
+            <a href="resources/images/art/games/lineup.png"><img src="resources/images/art/games/lineup.png" alt=""></a>
+            <a href="resources/images/art/games/worrel.png"><img src="resources/images/art/games/worrel.png" alt=""></a>
+            <a href="resources/images/art/games/halloween.png"><img src="resources/images/art/games/halloween.png" alt=""></a>
+            <a href="resources/images/art/games/boardgamelineup.png"><img src="resources/images/art/games/boardgamelineup.png" alt=""></a>
+            <a href="resources/images/art/games/ophwife.png"><img src="resources/images/art/games/ophwife-cropped.png" alt=""></a>
+          </div>
+
+          <p class="art-footer">
+            Check out more on my <a href="https://bsky.app/profile/megs-trying-art.bsky.social" target="_blank">Bluesky</a>!
+          </p>
+
+          <!-- Lightbox container -->
+          <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" src="" alt="">
+            <a class="lightbox-prev">&#10094;</a>
+            <a class="lightbox-next">&#10095;</a>
+          </div>
+
         </div>
       </section>
       <section id=3 class="section about/contact">
         <button type="button" class="back-button"><i class="fa-solid fa-angle-up"></i></button>
-        <h1 class="header">About Me</h1>
-        <div class="about-wrapper">
-          <div class="portrait-container">
-            <img src="./resources/images/108783.jpeg" alt="Cartoony self-portrait of Megan" class="portrait">
-          </div>
-          <div class="about-content">
-            <p>
-              Hi! I’m <span class="gradient-name">Megan Lincicum</span> — an engineering student at Johns Hopkins University with a passion for CS and game development.
-            </p>
-            <p>
-              I love creating games, working on meaningful web projects, and helping others learn to code.
-            <p>
-              When I’m not coding, you’ll find me writing stories, drawing comics, or otherwise bringing worlds to life.
-            </p>
+        <div class="scrollable">
+          <h1 class="header">About Me</h1>
+          <div class="about-wrapper">
+            <div class="portrait-container">
+              <img src="./resources/images/108783.jpeg" alt="Cartoony self-portrait of Megan" class="portrait">
+            </div>
+            <div class="about-content">
+              <p>
+                Hi! I'm <span class="gradient-name">Megan Lincicum</span> — an engineering student at Johns Hopkins University with a passion for CS and game development.
+              </p>
+              <p>
+                I love creating games, coding meaningful projects, and sharing what I know — for over two years, I've taught kids block coding, JavaScript, and Unity game dev.
+              <p>
+                When I'm not coding, you'll find me writing stories, drawing comics, or otherwise bringing worlds to life. Let's talk!
+              </p>
 
-            <p>I’m always open to new opportunities, collaborations, or just saying hi — so feel free to reach out!</p>
-          </div>
-          <div class="contact-icons">
-            <a href="mailto:mglincicum@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2x"></i></a>
-            <a href="https://www.linkedin.com/in/megan-lincicum/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
-            <a href="https://bsky.app/profile/megs-trying-art.bsky.social" target="_blank"><i class="fa-brands fa-bluesky fa-2x"></i></a>
+              
+            </div>
+            <div class="contact-icons">
+              <a href="mailto:mglincicum@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2x"></i></a>
+              <a href="https://www.linkedin.com/in/megan-lincicum/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+              <a href="https://bsky.app/profile/megs-trying-art.bsky.social" target="_blank"><i class="fa-brands fa-bluesky fa-2x"></i></a>
+            </div>
+            <footer class="site-footer">
+              <p>Designed & coded from scratch by Megan Lincicum.</p>
+            </footer>
           </div>
         </div>
       </section>
