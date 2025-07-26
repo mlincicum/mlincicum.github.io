@@ -150,7 +150,7 @@ filterButtons.forEach(button => {
     // filter projects
     projects.forEach(project => {
       const tags = project.getAttribute('data-tags').split(' ');
-      if (filter === 'all' || tags.includes(filter)) {
+      if (tags.includes(filter)) {
         project.style.display = 'flex';
       } else {
         project.style.display = 'none';
@@ -187,24 +187,38 @@ filterButtons.forEach(button => {
   });
 });
 
-// we should arrange them once at the beginning
-projects.forEach((project, index) => {
-      const image = project.querySelector('.project-image');
-      const description = project.querySelector('.project-description');
-
-      if (index % 2 === 0) {
-        // left
-        project.classList.add('pleft');
-        image.classList.add('left');
-        description.classList.add('left');
+// we should arrange them once at the beginning - start at Game Dev
+    projects.forEach(project => {
+      const tags = project.getAttribute('data-tags').split(' ');
+      if (tags.includes('game-dev')) {
+        project.style.display = 'flex';
       } else {
-        // right
-        project.classList.add('pright');
-        image.classList.add('right');
-        description.classList.add('right');
+        project.style.display = 'none';
       }
     });
+let count = 0;
+    const visible_projects = document.querySelectorAll('.project');
+    visible_projects.forEach((project, index) => {
+      if (project.style.display == 'flex') {
+        const image = project.querySelector('.project-image');
+        const description = project.querySelector('.project-description');
 
+        if (count % 2 === 0) {
+          // left
+          project.classList.add('pleft');
+          image.classList.add('left');
+          description.classList.add('left');
+        } else {
+          // right
+          project.classList.add('pright');
+          image.classList.add('right');
+          description.classList.add('right');
+        }
+
+        count += 1;
+      }
+     
+    });
 // Filtering in art between illustrations and game assets
 const artFilterButtons = document.querySelectorAll('.art-filter-btn');
 const artGrids = document.querySelectorAll('.art-grid');
