@@ -375,6 +375,16 @@ body, html {
 
 
   border-radius: 25px;
+
+  text-decoration: none;
+}
+.project:hover {
+  cursor: pointer;
+}
+
+.project:link,
+.project:visited {
+  color: white; 
 }
 
 .project h3 {
@@ -385,6 +395,7 @@ body, html {
 }
 
 .project-image {
+  display: block;
   width: 300px;
   height: 250px;
 }
@@ -410,14 +421,6 @@ body, html {
 .project-description {
   display: flex;
   flex-direction: column;
-}
-
-.project a {
-  text-decoration: none;
-}
-
-.project a:link, a:visited {
-  color: white;
 }
 
 .project p {
